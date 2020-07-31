@@ -6,7 +6,7 @@ After=network.target auditd.service
 Type=simple
 User=microtick
 Group=microtick
-ExecStart=/home/ubuntu/microtick/mtd start --home /home/ubuntu/.microtick
+ExecStart=/home/ubuntu/microtick/mtd start --home /home/microtick/.microtick
 ExecStop=/bin/kill -HUP $MAINPID
 
 [Install]
