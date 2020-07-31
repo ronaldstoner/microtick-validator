@@ -1,0 +1,13 @@
+[Unit]
+Description=Microtick mtd daemon
+After=network.target auditd.service
+
+[Service]
+Type=simple
+User=microtick
+Group=microtick
+ExecStart=/home/ubuntu/microtick/mtd start --home /home/ubuntu/.microtick
+ExecStop=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
